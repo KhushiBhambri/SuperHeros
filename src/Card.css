@@ -13,7 +13,7 @@ h5 {
   padding: 5%;
   /* height: 100%; */
   box-shadow: 0 2px 8px aqua;
-  background-color: blanchedalmond;
+  background-color: #2a2a2a;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -23,11 +23,12 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 90vh;
+  /* background: url('https://cdn.wallpapersafari.com/54/40/fsUXYx.jpg'); */
 }
 
 .Resultcard h3 {
-  color: rgb(11, 71, 71);
+  color: rgb(126, 190, 190);
 }
 .scoresc {
   padding: 2px;
@@ -45,7 +46,7 @@ h5 {
   font-style: italic;
 }
 .message .Win {
-  color: green;
+  color: rgb(13, 184, 13);
 }
 
 .message .Loss {
@@ -56,7 +57,7 @@ h5 {
   color: palegoldenrod;
 }
 .message p {
-  color: #2a2a2a;
+  color: #f8eeee;
   font-size: 0.9em;
   margin-bottom: 0;
 }

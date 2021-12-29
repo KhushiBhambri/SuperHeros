@@ -49,10 +49,13 @@
 .imge img {
   border: 2px solid aliceblue;
   max-width: 85vw;
+  max-height: 70vh;
 }
 .Playcards {
+  /* width: 100%; */
   display: flex;
   justify-content: space-around;
+  /* align-items: center; */
 }
 
 @media (max-width: 580px) {

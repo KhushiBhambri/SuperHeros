@@ -20,9 +20,9 @@ const [powerstat,setpowerstat]=useState(-1)
 const[score1,setscore1]=useState(0)
 const[score2,setscore2]=useState(0)
 const[Result,setResult]=useState(false)
-
+const[show,setshow]=useState(false)
+const[messagetag,setmessagetag]=useState("")
 // console.log("abcd")
-
 
 
 const psarr=["Combat","Durability","Strength","Power","Intelligence","Speed"]
@@ -81,25 +81,36 @@ function showResult()
   setResult(true);
 }
 
+function set_show(user,comp){
+  if(!show){
+       if(user>comp){
+         setscore1(score1+1)
+          setmessagetag("win")
+        }
+       else if(user<comp){
+         setscore2(score2+1)
+        setmessagetag("lose")
+       }
+       setshow(true)
+       console.log("user selected => ",user," ",messagetag)
+  }
+}
+
 function set_id(){
   console.log("powerstat : ",powerstat)
 
-  if (heros[idx].powerstats[powerst]>villians[idx].powerstats[powerst])
-  {setscore1(score1+1)}
-  else if(heros[idx].powerstats[powerst]<villians[idx].powerstats[powerst])
-  {setscore2(score2+1)}
-
   setpowerstat(-1)
     setwheel(true)
-    setidx(idx+1)   
+    setidx(idx+1)
+    setshow(false)   
 }
 
 // console.log("id : ",idx)
 if(powerstat>=0) var powerst= psarr[powerstat].toLowerCase()
 return (
   <div className='main2'>
-  {/* <Bg/> */}
-  {(Result)? (<ResultCard s1={score1} s2={score2}/>)
+  {(Result)? (  <div><Bg/>
+                   <ResultCard s1={score1} s2={score2}/></div>)
     :(<div className="wrapper">
         <div className="header">
           {
@@ -121,30 +132,33 @@ return (
         ( 
           <div>
             <div className="Play">
-            <div>{
-                (heros[idx].powerstats[powerst]>villians[idx].powerstats[powerst])?
-                 <h1 style={{color:'lime'}}>Great!!</h1>
+            {(show)?(<div>{
+                (messagetag=="win")?
+                 <h1 style={{color:'rgb(13, 184, 13)'}}>Great!!</h1>
                  :(
-                    (heros[idx].powerstats[powerst]<villians[idx].powerstats[powerst])?
+                    (messagetag=="lose")?
                      <h1 style={{color:'red'}}>Oops!!</h1>
                      :
                     <h1 style={{color:'yellow'}}>Tie!!</h1>
                   )
-              }
-              </div>
-              <div><GameCard h={heros[idx]} v={villians[idx]} ps={powerstat} pslist={psarr} s1={score1} s2={score2}/></div>
+                 }
+              </div>):
+              (<div><h1 style={{color:'grey'}}>Choose one Card</h1></div>)
+            }
+
+            <div><GameCard h={heros[idx]} v={villians[idx]} ps={powerstat} pslist={psarr} s1={score1} s2={score2} show={show} set_show={set_show}/></div>
             </div>
             
             {              
-            (idx<15 && powerstat>=0)?
+            (show && idx<15 && powerstat>=0)?
             <button className="Next playbutton" onClick={set_id}> Next! </button>
-            :
-            (
-            <div className="result">
+            :((show)?
+            (<div className="result">
               <button className="Result playbutton" onClick={showResult}> show Result!</button>
-            </div>
-            )
+            </div>):"")
             }
+
+
         
             {/* <FlipCard/> */}
           </div>
