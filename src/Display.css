@@ -1,0 +1,139 @@
+.avatar {
+  border-radius: 50%;
+  border: 2px solid rgb(90, 196, 223);
+  box-shadow: 0 2px 8px rgb(90, 196, 223);
+  height: 150px;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.Head {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  color: rgb(117, 178, 231);
+  align-items: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Verdana, sans-serif;
+  font-style: italic;
+}
+
+.Head h3 {
+  display: block;
+  color: rgb(165, 164, 167);
+}
+
+.active#Bio {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFcWJdGnEbbzkKOUwWzOq5G2-5pLbkyBl7tg&usqp=CAU');
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.active#appearance {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvHSwJy3bjgRmrkv33c8K8pAyyTkcErcGF_A&usqp=CAU');
+  background-size: 100% auto;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+}
+
+.active#powerstat {
+  background: url('https://st.depositphotos.com/1026550/4218/i/600/depositphotos_42182797-stock-photo-conflict.jpg');
+  background-size: 100% auto;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+}
+.active#relatives {
+  background: url('https://wallpaperaccess.com/full/6150045.jpg') rgb(0, 0, 0);
+  background-size: 100% auto;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+}
+
+.active#grpaff {
+  background: url('https://sportshub.cbsistatic.com/i/2021/04/09/11ebf5fc-2740-4663-b330-67abe25223a4/marvel-superheroes-avengers-campus-1210474.jpg')
+    rgb(0, 0, 0);
+  background-size: 100% auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.active#alias {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA4qgqSzh9wVofySDVjZx555c-zOa1DZshsg&usqp=CAU')
+    rgb(11, 22, 33);
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.card1 {
+  display: block;
+  margin: 15px;
+  width: 50vw;
+  border-radius: 20px;
+  box-shadow: 0 1px 4px rgb(202, 199, 199);
+  background-color: #112233;
+  color: white;
+  cursor: pointer;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.75s ease-in;
+  max-height: 50px;
+}
+
+.card1 h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 15px;
+  color: rgb(117, 178, 231);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Verdana, sans-serif;
+  font-style: italic;
+}
+
+.card1 ul {
+  opacity: 0;
+}
+
+.card1.active ul {
+  opacity: 1;
+  text-align: left;
+}
+
+.card1.active {
+  flex: 5;
+  max-height: fit-content;
+  box-shadow: 0 2px 8px rgb(90, 196, 223);
+}
+
+.card1.active h2 {
+  color: rgb(155, 213, 228);
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.Biodata {
+  width: 100vw;
+  height: 100%;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+  .card1 {
+    max-height: 70px;
+    width: 90vw;
+  }
+  .Head {
+    flex-direction: column;
+  }
+
+  
+}

@@ -1,0 +1,117 @@
+.Scores {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+h5 {
+  top: 20px;
+}
+
+.Resultcard {
+  width: 90vw;
+  padding: 5%;
+  /* height: 100%; */
+  box-shadow: 0 2px 8px aqua;
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.Resultcard h3 {
+  color: rgb(11, 71, 71);
+}
+.scoresc {
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Resultcard h2 {
+  color: rgb(90, 196, 223);
+  text-align: center;
+}
+
+.message {
+  font-size: 2em;
+  font-style: italic;
+}
+.message .Win {
+  color: green;
+}
+
+.message .Loss {
+  color: crimson;
+}
+
+.message .Tie {
+  color: palegoldenrod;
+}
+.message p {
+  color: #2a2a2a;
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+
+.gamecard {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px aqua;
+  border: 2px solid aqua;
+  background-color: rgb(49, 48, 48, 0.6);
+  padding: 20px;
+  width: 20vw;
+}
+
+.villian {
+  color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px tomato;
+  background-color: rgb(49, 48, 48, 0.6);
+  border: 2px solid tomato;
+  padding: 20px;
+  width: 20vw;
+}
+
+.avatarc {
+  border-radius: 50%;
+  /* border: 5px solid #928f8f; */
+  box-shadow: 2px 5px 10px rgb(49, 48, 48);
+  object-fit: contain;
+  width: 80%;
+}
+
+@media (max-width: 500px) {
+  .avatarc {
+    height: 80%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero,
+  .villian {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero,
+  .villian {
+    width: 35vw;
+  }
+}

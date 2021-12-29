@@ -1,0 +1,119 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+button {
+  background: none;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#spin,
+#reset {
+  position: absolute;
+  bottom: 45%;
+  right: 44%;
+  max-height: 60px;
+  max-width: 60px;
+  height: 10vw;
+  width: 10vw;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 3;
+}
+.container {
+  position: relative;
+  max-width: 500px;
+  max-height: 500px;
+  height: 100vw;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#spin:hover {
+  color: rgb(0, 180, 120);
+  /* border-color: rgb(0, 180, 120); */
+}
+
+#spin:focus,
+#reset:focus {
+  outline: none;
+}
+
+/* #reset {
+      position: absolute;
+      bottom: 20vh;
+      right: 35vw;
+    } */
+
+#reset:hover {
+  color: red;
+  /* border-color: red; */
+}
+
+#readout {
+  color: white;
+}
+
+#wheel {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  max-width: 500px;
+  max-height: 500px;
+  height: 100vw;
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* .display {
+  position: absolute;
+  margin-top: 10vh;
+} */
+.display {
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: blanchedalmond;
+  font-style: oblique;
+}
+#selector {
+  position: absolute;
+  bottom: 53%;
+  right: 47%;
+  color: black;
+  font-size: 32px;
+  z-index: 3;
+}
+
+#result {
+  font-size: 20px;
+  color: rgb(0, 180, 120);
+}
+
+input {
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 552px) {
+  button {
+    font-size: 3vw;
+  }
+  #selector {
+    bottom: 52%;
+    right: 46%;
+    font-size: 30px;
+  }
+}
+@media (max-width: 500px) {
+  #selector {
+    bottom: 51%;
+    right: 46%;
+    font-size: 26px;
+  }
+}

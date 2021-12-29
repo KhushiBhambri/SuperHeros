@@ -1,0 +1,29 @@
+.hamburger-menu {
+  display: none;
+}
+
+.headbar {
+  display: flex;
+}
+
+.mobile-headbar {
+  background-color: #0c0d13;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 580px) {
+  .headbar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    padding: 2px;
+    margin-right: 10px;
+  }
+  .hamburger-menu a {
+    color: aliceblue;
+  }
+}
