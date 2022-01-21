@@ -1,6 +1,6 @@
-# Getting Started with Create React App
 
-#view My app Over Here: [click me!](https://kb-superhero-console.netlify.app/)
+
+# View My app Over Here: [click me!](https://kb-superhero-console.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
